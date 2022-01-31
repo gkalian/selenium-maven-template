@@ -15,39 +15,41 @@ public class DriverFactory {
     public static WebDriver createInstance() {
 
         WebDriver driver = null;
+
         String browserName = System.getProperty("browser", Type.CHROME.toString()).toUpperCase();
         Type Type = DriverFactory.Type.valueOf(browserName);
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-notifications");
-        options.addArguments("--lang=en");
-        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
-        options.addArguments("--disable-gpu");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-extensions");
-        options.addArguments("--start-maximized");
-
         switch (Type) {
-            case FIREFOX:
+            case FIREFOX -> {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
-                break;
-            case EDGE:
+            }
+            case EDGE -> {
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
-                break;
-            case IE:
+            }
+            case IE -> {
                 WebDriverManager.iedriver().setup();
                 driver = new InternetExplorerDriver();
-                break;
-            case OPERA:
+            }
+            case OPERA -> {
                 WebDriverManager.operadriver().setup();
                 driver = new OperaDriver();
-                break;
-            default:
+            }
+            default -> {
                 WebDriverManager.chromedriver().setup();
+
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--disable-notifications");
+                options.addArguments("--lang=en");
+                options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+                options.addArguments("--disable-gpu");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-extensions");
+                options.addArguments("--start-maximized");
+
                 driver = new ChromeDriver(options);
-                break;
+            }
         }
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
