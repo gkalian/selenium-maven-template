@@ -12,21 +12,21 @@ public class DriverManager {
     private DriverManager() {
     }
 
-    private static ThreadLocal<WebDriver> webDriver = new ThreadLocal<WebDriver>();
+    private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
 
     public static WebDriver getDriver() {
-        return webDriver.get();
+        return driver.get();
     }
 
-    public static void setWebDriver(WebDriver driver) {
-        webDriver.set(driver);
+    public static void setDriver(WebDriver driver) {
+        DriverManager.driver.set(driver);
     }
 
     public static void quitDriver() {
         if (getDriver() != null) {
             getDriver().close();
             getDriver().quit();
-            webDriver.remove();
+            driver.remove();
         }
     }
 }
