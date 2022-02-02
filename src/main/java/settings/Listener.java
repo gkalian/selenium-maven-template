@@ -18,7 +18,8 @@ public class Listener implements IInvokedMethodListener, ITestListener {
     @Override
     public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
         if (method.isTestMethod()) {
-            DriverManager.setDriver(DriverFactory.createInstance(PropertyLoader.getPropertyByName("browser.properties","browser.name")));
+            DriverManager.setDriver(DriverFactory.
+                    createInstance(PropertyLoader.getPropertyByName("browser.properties","browser.name")));
         }
     }
 
