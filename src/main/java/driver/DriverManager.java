@@ -1,7 +1,12 @@
 package driver;
 
 import org.openqa.selenium.WebDriver;
-
+/**
+ * Default getter-setter class for web driver
+ * plus thread support
+ * @author gkalian
+ * @version 1.0
+ */
 public class DriverManager {
 
     private DriverManager() {

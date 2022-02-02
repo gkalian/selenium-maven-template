@@ -9,7 +9,11 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
-
+/**
+ * Driver factory to initialize web driver
+ * @author gkalian
+ * @version 1.1
+ */
 public class DriverFactory {
 
     public static WebDriver createInstance() {

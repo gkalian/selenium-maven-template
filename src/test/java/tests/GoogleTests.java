@@ -6,7 +6,11 @@ import org.testng.annotations.Test;
 import pages.GooglePage;
 import settings.TestRunner;
 
-
+/**
+ * Initial test to open google page
+ * @author gkalian
+ * @version 1.0
+ */
 @Test
 public class GoogleTests extends TestRunner {
     String url = "https://www.google.com/";
