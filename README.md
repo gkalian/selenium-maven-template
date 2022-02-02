@@ -9,7 +9,8 @@ It's a personal playground with Selenium and other tools.
     - [Webdrivermanager 5.0.3](https://github.com/bonigarcia/webdrivermanager)
     - [Selenium Java 4.1.1](https://www.selenium.dev/)
     - [Testng 7.5](https://testng.org/)
-    - [log4j 2.17.0](https://logging.apache.org/log4j/2.x/)
+ 
+To see more libraries check `pom.xml`.
 
 ## Credits
 
