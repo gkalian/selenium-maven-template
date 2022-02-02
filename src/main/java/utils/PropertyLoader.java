@@ -5,7 +5,11 @@ import org.testng.Assert;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
+/**
+ * Property util class to load data from file
+ * @author gkalian
+ * @version 1.0
+ */
 public class PropertyLoader {
 
     public static String getPropertyByName(String propertyFile, String propertyValue) {

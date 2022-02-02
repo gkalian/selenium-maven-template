@@ -14,8 +14,11 @@ import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.remote.AbstractDriverOptions;
-
-
+/**
+ * Different Browser settings
+ * @author gkalian
+ * @version 2.0
+ */
 public enum BrowserType {
 
     CHROME {

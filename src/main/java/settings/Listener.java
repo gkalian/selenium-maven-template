@@ -1,12 +1,10 @@
 package settings;
 
-import driver.Browser;
 import driver.DriverFactory;
 import driver.DriverManager;
 import org.testng.IInvokedMethod;
 import org.testng.IInvokedMethodListener;
 import org.testng.ITestResult;
-import org.testng.annotations.Parameters;
 import utils.PropertyLoader;
 
 /**
