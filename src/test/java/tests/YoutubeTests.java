@@ -3,7 +3,6 @@ package tests;
 import driver.DriverManager;
 import jdk.jfr.Description;
 import org.testng.annotations.Test;
-import pages.GooglePage;
 import pages.YoutubePage;
 import settings.TestRunner;
 

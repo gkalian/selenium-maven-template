@@ -4,6 +4,7 @@ import driver.DriverFactory;
 import driver.DriverManager;
 import org.testng.IInvokedMethod;
 import org.testng.IInvokedMethodListener;
+import org.testng.ITestListener;
 import org.testng.ITestResult;
 import utils.PropertyLoader;
 
@@ -12,7 +13,7 @@ import utils.PropertyLoader;
  * @author gkalian
  * @version 1.0
  */
-public class Listener implements IInvokedMethodListener {
+public class Listener implements IInvokedMethodListener, ITestListener {
 
     @Override
     public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
