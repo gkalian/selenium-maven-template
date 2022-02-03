@@ -31,6 +31,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <allureFolder>${project.build.directory}/allure-results</allureFolder>
         <testscope>testng.xml</testscope>
 
         <!--List of versions-->
@@ -69,6 +70,11 @@
             <artifactId>log4j-slf4j-impl</artifactId>
             <version>${version-log4j}</version>
         </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${version-allure-testng}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -78,10 +84,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${version-maven-surefire}</version>
                 <configuration>
+                    <systemPropertyVariables>
                         <argLine>
                             -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${version-aspectj}/aspectjweaver-${version-aspectj}.jar"
                         </argLine>
-
+                    <allure.results.directory>${allureFolder}</allure.results.directory>
+                    </systemPropertyVariables>
                     <suiteXmlFiles>
                         <suiteXmlFile>${testscope}</suiteXmlFile>
                     </suiteXmlFiles>
@@ -93,6 +101,11 @@
                         <version>${version-aspectj}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.10.0</version>
             </plugin>
         </plugins>
     </build>
