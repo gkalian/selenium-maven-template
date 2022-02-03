@@ -20,7 +20,7 @@ public class TestRunner {
 
         @AfterSuite
         public void afterSuite() {
-            DriverManager.quitDriver();
+            //DriverManager.quitDriver();
         }
 
 }

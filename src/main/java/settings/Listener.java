@@ -26,7 +26,7 @@ public class Listener implements IInvokedMethodListener, ITestListener {
     @Override
     public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
         if (method.isTestMethod()) {
-            DriverManager.quitDriver();
+           DriverManager.quitDriver();
         }
     }
 
