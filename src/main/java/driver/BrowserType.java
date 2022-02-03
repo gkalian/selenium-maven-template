@@ -20,7 +20,7 @@ import org.openqa.selenium.remote.AbstractDriverOptions;
  * @version 2.0
  */
 public enum BrowserType {
-
+    /**Browser settings and options*/
     CHROME {
         @Override
         public WebDriver createDriver() {
