@@ -19,18 +19,19 @@ import utils.PropertyLoader;
  * @version 1.1
  */
 public class DriverFactory {
-
+    /**Driver initialisation
+     * Browser depends on value stored in property file*/
     public static WebDriver createInstance(String browser) {
         WebDriver driver = BrowserType.valueOf(browser.toUpperCase()).createDriver();;
         driverConfig(driver);
         return driver;
     }
-
-    private static void driverConfig(WebDriver driver) {
+    /**Common driver configuration*/
+    public static void driverConfig(WebDriver driver) {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.manage().deleteAllCookies();
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
     }
 
 }
