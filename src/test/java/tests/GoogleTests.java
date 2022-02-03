@@ -13,8 +13,10 @@ import settings.TestRunner;
  */
 @Test
 public class GoogleTests extends TestRunner {
-    String url = "https://www.google.com/";
-    String title = "Google";
+
+    public String url = "https://www.google.com/";
+    public String title = "Google";
+    public String search = "rick astley";
 
     @Description("Test method to search on google")
     public void exampleTest(){
@@ -22,5 +24,8 @@ public class GoogleTests extends TestRunner {
 
         google.openURL(url);
         google.titleAssert(title);
+        google.searchFor(search);
+        google.titleAssert(search);
+
     }
 }

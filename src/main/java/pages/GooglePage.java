@@ -1,6 +1,12 @@
 package pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 import static org.testng.Assert.assertTrue;
 /**
  * Google page with all written methods
@@ -8,9 +14,21 @@ import static org.testng.Assert.assertTrue;
  * @version 1.0
  */
 public class GooglePage extends AbstractPage{
-
+    /**Constructor*/
     public GooglePage(WebDriver driver) {
         super(driver);
+        PageFactory.initElements( driver, this);
+    }
+    /**Web Elements*/
+    @FindBy(name = "q")
+    WebElement searchBox;
+
+    @FindBy(className = "ULSxyf")
+    WebElement videoBlock;
+
+    /**Page Methods*/
+    public void searchFor(String value){
+        searchBox.sendKeys(value + Keys.RETURN);
     }
 
     public void openURL(String url) {
@@ -20,6 +38,5 @@ public class GooglePage extends AbstractPage{
     public void titleAssert (String title) {
         assertTrue(driver.getTitle().contains(title));
     }
-
 
 }
