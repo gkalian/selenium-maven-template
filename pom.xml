@@ -8,60 +8,91 @@
     <artifactId>Playground</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <name>Selenium Tests Playground</name>
+    <description>Selenium Playground based on Webdrivermanager and testng</description>
+    <url>https://github.com/gkalian/selenium-maven-template</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>gkalian</name>
+            <organizationUrl>https://github.com/gkalian/selenium-maven-template</organizationUrl>
+        </developer>
+    </developers>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <testscope>testng.xml</testscope>
-        <allureFolder>${project.build.directory}/allure-results</allureFolder>
+
+        <!--List of versions-->
+        <version-webdrivermanager>5.0.3</version-webdrivermanager>
+        <version-selenium>4.1.1</version-selenium>
+        <version-testng>7.5</version-testng>
+        <version-log4j>2.17.0</version-log4j>
+        <version-allure-testng>2.13.9</version-allure-testng>
+        <version-maven-surefire>3.0.0-M3</version-maven-surefire>
+        <version-aspectj>1.9.6</version-aspectj>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.0.3</version>
+            <version>${version-webdrivermanager}</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.1.1</version>
+            <version>${version-selenium}</version>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.5</version>
+            <version>${version-testng}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
-            <version>2.17.0</version>
+            <version>${version-log4j}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-slf4j-impl</artifactId>
-            <version>2.17.0</version>
+            <version>${version-log4j}</version>
         </dependency>
-
-
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M3</version>
+                <version>${version-maven-surefire}</version>
                 <configuration>
+                        <argLine>
+                            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${version-aspectj}/aspectjweaver-${version-aspectj}.jar"
+                        </argLine>
+
                     <suiteXmlFiles>
                         <suiteXmlFile>${testscope}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>2.10.0</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${version-aspectj}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
