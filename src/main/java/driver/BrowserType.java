@@ -34,6 +34,7 @@ public enum BrowserType {
             chromeOptions.addArguments("--start-maximized");
             chromeOptions.addArguments("--disable-infobars");
             chromeOptions.addArguments("--disable-notifications");
+            chromeOptions.addArguments("--lang=en");
             return chromeOptions;
         }
     },
