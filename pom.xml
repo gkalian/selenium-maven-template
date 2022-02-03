@@ -40,6 +40,7 @@
         <version-testng>7.5</version-testng>
         <version-log4j>2.17.0</version-log4j>
         <version-allure-testng>2.13.9</version-allure-testng>
+        <version-allure-maven>2.10.0</version-allure-maven>
         <version-maven-surefire>3.0.0-M3</version-maven-surefire>
         <version-aspectj>1.9.6</version-aspectj>
     </properties>
@@ -105,7 +106,7 @@
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <version>2.10.0</version>
+                <version>${version-allure-maven}</version>
             </plugin>
         </plugins>
     </build>
