@@ -22,10 +22,10 @@ public class GoogleTests extends TestRunner {
     public void exampleTest(){
         GooglePage google = new GooglePage(DriverManager.getDriver());
 
-        google.openURL(url);
-        google.titleAssert(title);
+        google.openGoogleURL(url);
+        google.checkGoogleTitleAssert(title);
         google.searchFor(search);
-        google.titleAssert(search);
+        google.checkGoogleTitleAssert(search);
 
     }
 }

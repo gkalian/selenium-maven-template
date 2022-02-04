@@ -14,14 +14,14 @@ import settings.TestRunner;
 
 @Test
 public class YoutubeTests extends TestRunner {
-    String url = "https://www.youtube.com/";
-    String title = "Google";
+    static String url = "https://www.youtube.com/";
+    static String title = "Youtube";
 
     @Description("Test method to search on youtube")
-    public void exampleTest(){
+    public static void exampleTest(){
         YoutubePage yt = new YoutubePage(DriverManager.getDriver());
 
-        yt.openURL(url);
-        yt.titleAssert(title);
+        yt.openYT(url);
+        yt.titleYTAssert(title);
     }
 }
