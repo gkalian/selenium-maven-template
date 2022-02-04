@@ -28,8 +28,8 @@ public class DriverFactory {
     }
     /**Common driver configuration*/
     public static void driverConfig(WebDriver driver) {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(PropertyLoader.getImplicitlyWait()));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(PropertyLoader.getPageLoadTimeout()));
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
     }
