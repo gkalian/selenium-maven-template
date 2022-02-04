@@ -1,13 +1,11 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static org.testng.Assert.assertTrue;
 /**
  * Google page with all written methods
  * @author gkalian
@@ -31,12 +29,13 @@ public class GooglePage extends AbstractPage{
         searchBox.sendKeys(value + Keys.RETURN);
     }
 
-    public void openURL(String url) {
-        driver.get(url);
+    public void openGoogleURL(String url) {
+        openUrl(url);
     }
 
-    public void titleAssert (String title) {
-        assertTrue(driver.getTitle().contains(title));
+    public void checkGoogleTitleAssert (String title) {
+        titleAssert(title);
     }
+
 
 }

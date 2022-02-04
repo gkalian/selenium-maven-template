@@ -1,8 +1,8 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
-import static org.testng.Assert.assertTrue;
 /**
  * Google page with all written methods
  * @author gkalian
@@ -10,17 +10,17 @@ import static org.testng.Assert.assertTrue;
  */
 public class YoutubePage extends AbstractPage{
 
+    /**Constructor*/
     public YoutubePage(WebDriver driver) {
         super(driver);
+        PageFactory.initElements( driver, this);
     }
 
-    public void openURL(String url) {
-        driver.get(url);
-    }
+    public void openYT(String url) {
+        openUrl(url);}
 
-    public void titleAssert (String title) {
-        assertTrue(driver.getTitle().contains(title));
+    public void titleYTAssert (String title) {
+        titleAssert(title);
     }
-
 
 }

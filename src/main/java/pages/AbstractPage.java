@@ -9,17 +9,28 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import static org.testng.Assert.assertTrue;
+
 /**
  * Abstract page with driver inizialozator
  * @author gkalian
  * @version 1.0
  */
 public abstract class AbstractPage {
-    public WebDriver driver;
+    public static WebDriver driver;
 
     /**Constructor*/
-    public AbstractPage(WebDriver driver) {
-        this.driver = driver;
+    protected AbstractPage(WebDriver driver) {
+        AbstractPage.driver = driver;
     }
 
+    /**Page methods*/
+    protected static void openUrl(String url) {
+        driver.get(url);
+    }
+
+    /**Assertions*/
+    protected static void titleAssert(String title) {
+        assertTrue(driver.getTitle().contains(title));
+    }
 }
