@@ -1,6 +1,5 @@
 package settings;
 
-import driver.DriverManager;
 import org.testng.annotations.*;
 /**
  * Default behavior for tests with testng annotation
