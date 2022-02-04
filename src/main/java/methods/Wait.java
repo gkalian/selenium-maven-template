@@ -1,4 +1,4 @@
-package interfaces;
+package methods;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
