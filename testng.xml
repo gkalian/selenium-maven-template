@@ -7,9 +7,9 @@
         <listener class-name="settings.Listener"/>
     </listeners>
 
-    <test name="GoogleTest">
-        <classes>
-            <class name="tests.GoogleTests"/>
-        </classes>
+    <test name="Test package">
+        <packages>
+            <package name="tests.*"/>
+        </packages>
     </test>
 </suite>
