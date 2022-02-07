@@ -25,17 +25,17 @@ public class Wait {
         return wait;
     }
     /**Wait until element become visible*/
-    public static WebElement waitForElementToBeVisible(WebDriver driver, WebElement element) {
+    public WebElement waitForElementToBeVisible(WebDriver driver, WebElement element) {
         return fluentWait(driver).until(ExpectedConditions.visibilityOf(element));
     }
 
     /**Wait until element become clickable*/
-    public static WebElement waitForElementToBeClickable(WebDriver driver, WebElement element) {
+    public WebElement waitForElementToBeClickable(WebDriver driver, WebElement element) {
         return fluentWait(driver).until(ExpectedConditions.elementToBeClickable(element));
     }
 
     /**Wait until paae is fully loaded*/
-    public static void waitUntilPageIsLoaded(WebDriver driver){
+    public void waitUntilPageIsLoaded(WebDriver driver){
         wait.until(WebDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
     }
 }
