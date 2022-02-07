@@ -1,5 +1,6 @@
 package pages;
 
+import methods.Wait;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,11 +13,13 @@ import org.openqa.selenium.support.PageFactory;
  * @version 1.0
  */
 public class GooglePage extends AbstractPage{
+
     /**Constructor*/
     public GooglePage(WebDriver driver) {
         super(driver);
         PageFactory.initElements( driver, this);
     }
+
     /**Web Elements*/
     @FindBy(name = "q")
     WebElement searchBox;
@@ -25,16 +28,19 @@ public class GooglePage extends AbstractPage{
     WebElement videoBlock;
 
     /**Page Methods*/
-    public void searchFor(String value){
-        searchBox.sendKeys(value + Keys.RETURN);
-    }
-
-    public void openGoogleURL(String url) {
+    public GooglePage openGoogleURL(String url) {
         openUrl(url);
+        return this;
     }
 
-    public void checkGoogleTitleAssert (String title) {
+    public GooglePage searchFor(String value){
+        searchBox.sendKeys(value + Keys.RETURN);
+        return this;
+    }
+
+    public GooglePage checkGoogleTitleAssert (String title) {
         titleAssert(title);
+        return this;
     }
 
 

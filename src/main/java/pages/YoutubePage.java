@@ -1,6 +1,10 @@
 package pages;
 
+import methods.Wait;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
@@ -16,11 +20,34 @@ public class YoutubePage extends AbstractPage{
         PageFactory.initElements( driver, this);
     }
 
-    public void openYT(String url) {
-        openUrl(url);}
+    /**Web Elements*/
+    @FindBy(css = "input#search")
+    WebElement search;
 
-    public void titleYTAssert (String title) {
+    @FindBy(id = "search-icon-legacy")
+    WebElement searchBtn;
+
+    /**Page Methods*/
+    public YoutubePage openYT(String url) {
+        openUrl(url);
+        return this;
+    }
+
+    public YoutubePage searchFor (String value){
+        search.click();
+        search.sendKeys(value);
+        searchBtn.click();
+        return this;
+    }
+
+    public YoutubePage titleYTAssert (String title) {
         titleAssert(title);
+        return this;
+    }
+
+    public YoutubePage checkYTUrl (String url) {
+        urlAssert(url);
+        return this;
     }
 
 }
