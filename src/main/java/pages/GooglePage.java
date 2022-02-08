@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
  * @author gkalian
  * @version 1.0
  */
-public class GooglePage extends AbstractPage{
+public class GooglePage extends AbstractPage<GooglePage> {
 
     /**Constructor*/
     public GooglePage(WebDriver driver) {
@@ -29,6 +29,7 @@ public class GooglePage extends AbstractPage{
     /**Page Methods*/
     public GooglePage openGoogleURL(String url) {
         openUrl(url);
+        waitUntilPageIsLoaded();
         return this;
     }
 
@@ -39,6 +40,7 @@ public class GooglePage extends AbstractPage{
     }
 
     public GooglePage checkGoogleTitleAssert (String title) {
+        waitUntilPageIsLoaded();
         titleAssert(title);
         return this;
     }

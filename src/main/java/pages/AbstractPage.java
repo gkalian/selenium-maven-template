@@ -11,9 +11,9 @@ import static org.testng.Assert.assertTrue;
  * @author gkalian
  * @version 1.0
  */
-public abstract class AbstractPage {
+public abstract class AbstractPage<T> {
     public WebDriver driver;
-    public Wait wait;
+    public Wait wait = new Wait();
 
     /**Constructor*/
     public AbstractPage(WebDriver driver) {

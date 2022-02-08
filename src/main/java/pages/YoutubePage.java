@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
  * @author gkalian
  * @version 1.0
  */
-public class YoutubePage extends AbstractPage{
+public class YoutubePage extends AbstractPage<YoutubePage> {
 
     /**Constructor*/
     public YoutubePage(WebDriver driver) {
@@ -28,6 +28,7 @@ public class YoutubePage extends AbstractPage{
     /**Page Methods*/
     public YoutubePage openYT(String url) {
         openUrl(url);
+        waitUntilPageIsLoaded();
         return this;
     }
 
@@ -35,15 +36,18 @@ public class YoutubePage extends AbstractPage{
         search.click();
         search.sendKeys(value);
         searchBtn.click();
+        waitUntilPageIsLoaded();
         return this;
     }
 
     public YoutubePage titleYTAssert (String title) {
+        waitUntilPageIsLoaded();
         titleAssert(title);
         return this;
     }
 
     public YoutubePage checkYTUrl (String url) {
+        waitUntilPageIsLoaded();
         urlAssert(url);
         return this;
     }
