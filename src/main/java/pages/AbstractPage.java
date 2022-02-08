@@ -1,6 +1,6 @@
 package pages;
 
-import methods.Wait;
+import helper.Wait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import static org.testng.Assert.assertEquals;
