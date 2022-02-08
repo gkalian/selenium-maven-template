@@ -101,18 +101,6 @@ public enum BrowserType {
             internetExplorerOptions.ignoreZoomSettings();
             return internetExplorerOptions;
         }
-    },
-    DEFAULT {
-        @Override
-        public WebDriver createDriver() {
-
-            return null;
-        }
-
-        @Override
-        public AbstractDriverOptions<?> getOptions() {
-            return null;
-        }
     };
 
     public abstract WebDriver createDriver();
