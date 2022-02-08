@@ -8,20 +8,20 @@ import org.openqa.selenium.WebDriver;
  * @version 1.0
  */
 public class DriverManager {
-
+    /**Constructor*/
     private DriverManager() {
     }
-
+    /**Need to threads*/
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
-
+    /**Getter*/
     public static WebDriver getDriver() {
         return driver.get();
     }
-
+    /**Setter*/
     public static void setDriver(WebDriver driver) {
         DriverManager.driver.set(driver);
     }
-
+    /**Driver closing*/
     public static void quitDriver() {
         if (getDriver() != null) {
             getDriver().close();
