@@ -34,8 +34,9 @@ public class Wait {
         return fluentWait(driver).until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    /**Wait until paae is fully loaded*/
+    /**Wait until page is fully loaded*/
     public void waitUntilPageIsLoaded(WebDriver driver){
+        wait = fluentWait(driver);
         wait.until(WebDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
     }
 }
