@@ -1,6 +1,5 @@
 package pages;
 
-import methods.Wait;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -35,6 +34,7 @@ public class GooglePage extends AbstractPage{
 
     public GooglePage searchFor(String value){
         searchBox.sendKeys(value + Keys.RETURN);
+        waitUntilPageIsLoaded();
         return this;
     }
 
