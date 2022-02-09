@@ -1,8 +1,13 @@
 package pages;
 
+import helper.Element;
 import helper.Wait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.Locale;
+
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
@@ -14,6 +19,7 @@ import static org.testng.Assert.assertTrue;
 public abstract class AbstractPage<T> {
     public WebDriver driver;
     public Wait wait = new Wait();
+    public Element element = new Element();
 
     /**Constructor*/
     public AbstractPage(WebDriver driver) {
@@ -25,12 +31,8 @@ public abstract class AbstractPage<T> {
         driver.get(url);
     }
 
-    public void clickElementById(String id){
-        driver.findElement(By.id(id)).click();
-    }
-
-    public void clickElementByClassName(String classname){
-        driver.findElement(By.className(classname)).click();
+    public void clickElement(WebElement id){
+        element.clickElement(id);
     }
 
     /**Assertions*/

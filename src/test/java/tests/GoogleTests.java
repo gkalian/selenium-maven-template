@@ -16,7 +16,8 @@ public class GoogleTests extends TestRunner {
 
     public String url = "https://www.google.com/";
     public String title = "Google";
-    public String search = "rick astley";
+    public String search = "github";
+    public String searchTitle = "GitHub";
 
     @Description("Test method to search on google")
     public void exampleTest(){
@@ -26,7 +27,9 @@ public class GoogleTests extends TestRunner {
                 .openGoogleURL(url)
                 .checkGoogleTitleAssert(title)
                 .searchFor(search)
-                .checkGoogleTitleAssert(search);
+                .checkGoogleTitleAssert(search)
+                .clickPicturesTab()
+                .checkGoogleTitleAssert(searchTitle);
 
     }
 }

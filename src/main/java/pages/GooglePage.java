@@ -1,5 +1,6 @@
 package pages;
 
+import helper.Element;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,6 +27,9 @@ public class GooglePage extends AbstractPage<GooglePage> {
     @FindBy(className = "ULSxyf")
     WebElement videoBlock;
 
+    @FindBy(xpath = "//a[contains(.,'github.com')]")
+    WebElement firstlink;
+
     /**Page Methods*/
     public GooglePage openGoogleURL(String url) {
         openUrl(url);
@@ -45,5 +49,10 @@ public class GooglePage extends AbstractPage<GooglePage> {
         return this;
     }
 
+    public GooglePage clickPicturesTab() {
+        clickElement(firstlink);
+        waitUntilPageIsLoaded();
+        return this;
+    }
 
 }
