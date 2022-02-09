@@ -10,7 +10,11 @@ import utils.PropertyLoader;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
-
+/**
+ * Class to store wait methods
+ * @author gkalian
+ * @version 1.0
+ */
 public class Wait {
     /**Initial method for webdriver fluent wait*/
     public static FluentWait<WebDriver> wait;
@@ -24,6 +28,7 @@ public class Wait {
         }
         return wait;
     }
+
     /**Wait until element become visible*/
     public WebElement waitForElementToBeVisible(WebDriver driver, WebElement element) {
         return fluentWait(driver).until(ExpectedConditions.visibilityOf(element));
