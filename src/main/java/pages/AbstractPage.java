@@ -2,12 +2,8 @@ package pages;
 
 import helper.Element;
 import helper.Wait;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import java.util.Locale;
-
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
