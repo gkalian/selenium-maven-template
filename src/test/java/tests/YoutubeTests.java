@@ -2,6 +2,7 @@ package tests;
 
 import driver.DriverManager;
 import jdk.jfr.Description;
+import lombok.extern.slf4j.Slf4j;
 import org.testng.annotations.Test;
 import pages.YoutubePage;
 import settings.TestRunner;
@@ -11,7 +12,7 @@ import settings.TestRunner;
  * @author gkalian
  * @version 1.0
  */
-
+@Slf4j
 @Test
 public class YoutubeTests extends TestRunner {
     String url = "https://www.youtube.com/";
