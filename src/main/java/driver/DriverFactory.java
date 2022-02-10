@@ -1,8 +1,6 @@
 package driver;
 
 import java.time.Duration;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import utils.PropertyLoader;
@@ -12,6 +10,7 @@ import utils.PropertyLoader;
  * @author gkalian
  * @version 1.1
  */
+@Slf4j
 public class DriverFactory {
     /**Driver initialisation
      * Browser depends on value stored in property file*/
