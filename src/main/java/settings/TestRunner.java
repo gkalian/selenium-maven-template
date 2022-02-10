@@ -1,12 +1,17 @@
 package settings;
 
+import driver.DriverManager;
 import org.testng.annotations.*;
+import utils.Screenshots;
+
+import java.io.IOException;
+
 /**
  * Default behavior for tests with testng annotation
  * @author gkalian
  * @version 1.0
  */
-@Listeners(Listener.class)
+@Listeners({Listener.class})
 public class TestRunner {
 
         @BeforeMethod

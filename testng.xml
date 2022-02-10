@@ -5,6 +5,7 @@
 
     <listeners>
         <listener class-name="settings.Listener"/>
+<!--        <listener class-name="settings.AllureListener"/>-->
     </listeners>
 
     <test name="Test package">
