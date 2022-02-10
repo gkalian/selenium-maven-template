@@ -29,6 +29,5 @@ public class GoogleTests extends TestRunner {
                 .checkGoogleTitleAssert(search)
                 .clickPicturesTab()
                 .checkGoogleTitleAssert(searchTitle);
-
     }
 }
