@@ -2,7 +2,6 @@ package tests;
 
 import driver.DriverManager;
 import jdk.jfr.Description;
-import lombok.extern.slf4j.Slf4j;
 import org.testng.annotations.Test;
 import pages.GooglePage;
 import settings.TestRunner;
@@ -12,7 +11,6 @@ import settings.TestRunner;
  * @author gkalian
  * @version 1.0
  */
-@Slf4j
 @Test
 public class GoogleTests extends TestRunner {
 
@@ -24,7 +22,6 @@ public class GoogleTests extends TestRunner {
     @Description("Test method to search on google")
     public void exampleTest(){
         GooglePage google = new GooglePage(DriverManager.getDriver());
-
         google
                 .openGoogleURL(url)
                 .checkGoogleTitleAssert(title)
