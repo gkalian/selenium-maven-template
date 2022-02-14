@@ -13,13 +13,13 @@ import static org.testng.Assert.assertTrue;
  * @version 1.0
  */
 public abstract class AbstractPage<T> {
-    public WebDriver driver;
-    public Wait wait = new Wait();
-    public Element element = new Element();
+    public static WebDriver driver;
+    public static Wait wait = new Wait();
+    public static Element element = new Element();
 
     /**Constructor*/
     public AbstractPage(WebDriver driver) {
-        this.driver = driver;
+        AbstractPage.driver = driver;
     }
 
     /**Page methods*/
