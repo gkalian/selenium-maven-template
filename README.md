@@ -22,4 +22,4 @@ It is not a direct fork, but while writing it, I was looking into several others
 
 ## Usage
 
-Since it's a personal playground I suggest to avoid using this repository. But if you want - feel free. 
+As this is a personal sandbox use at your own risk. 
