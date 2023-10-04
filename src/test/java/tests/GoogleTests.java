@@ -25,6 +25,7 @@ public class GoogleTests extends TestRunner {
         google
                 .openGoogleURL(url)
                 .checkGoogleTitleAssert(title)
+                .closePopup()
                 .searchFor(search)
                 .checkGoogleTitleAssert(search)
                 .clickPicturesTab()

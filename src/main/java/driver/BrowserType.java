@@ -11,8 +11,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
-import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.remote.AbstractDriverOptions;
 /**
  * Different Browser settings
@@ -35,6 +33,7 @@ public enum BrowserType {
             chromeOptions.addArguments("--disable-infobars");
             chromeOptions.addArguments("--disable-notifications");
             chromeOptions.addArguments("--lang=en");
+            chromeOptions.addArguments("--remote-allow-origins=*");
             return chromeOptions;
         }
     },
@@ -54,23 +53,6 @@ public enum BrowserType {
         }
     },
 
-    OPERA{
-        @Override
-        public WebDriver createDriver() {
-            WebDriverManager.getInstance(DriverManagerType.OPERA).setup();
-            return new OperaDriver(getOptions());
-        }
-
-        @Override
-        public OperaOptions getOptions() {
-            OperaOptions operaOptions = new OperaOptions();
-            operaOptions.addArguments("--start-maximized");
-            operaOptions.addArguments("--disable-infobars");
-            operaOptions.addArguments("--disable-notifications");
-            return operaOptions;
-        }
-    },
-
     EDGE{
         @Override
         public WebDriver createDriver() {
@@ -84,6 +66,7 @@ public enum BrowserType {
             edgeOptions.addArguments("--start-maximized");
             edgeOptions.addArguments("--disable-infobars");
             edgeOptions.addArguments("--disable-notifications");
+            edgeOptions.addArguments("--remote-allow-origins=*");
             return edgeOptions;
         }
     },

@@ -2,13 +2,13 @@
 
 It's a personal playground with Selenium and other tools. 
 
-## Stack & Libraries
+## Libraries
 
 - Java JDK 17.0.2
 - Maven 3.8.3
-    - [Webdrivermanager 5.0.3](https://github.com/bonigarcia/webdrivermanager)
-    - [Selenium Java 4.1.1](https://www.selenium.dev/)
-    - [Testng 7.5](https://testng.org/)
+    - [Webdrivermanager](https://github.com/bonigarcia/webdrivermanager)
+    - [Selenium Java](https://www.selenium.dev/)
+    - [Testng](https://testng.org/)
  
 To see more libraries check `pom.xml`.
 
@@ -20,6 +20,6 @@ It is not a direct fork, but while writing it, I was looking into several others
   - [Selenium-Maven-Template](https://github.com/Ardesco/Selenium-Maven-Template) by Ardesco
   - [Selenium-Testng-Template](https://github.com/sridharbandi/Selenium-Testng-Template) by sridharbandi
 
-## Usage
+## Changelog
 
-As this is a personal sandbox use at your own risk. 
+- v1.1 - update code, license added, new libs versions

@@ -25,10 +25,18 @@ public class YoutubePage extends AbstractPage<YoutubePage> {
     @FindBy(id = "search-icon-legacy")
     WebElement searchBtn;
 
+    @FindBy(className = "yt-spec-button-shape-next yt-spec-button-shape-next--filled yt-spec-button-shape-next--mono yt-spec-button-shape-next--size-m ")
+    WebElement buttonRejectAll;
+
     /**Page Methods*/
     public YoutubePage openYT(String url) {
         openUrl(url);
         waitUntilPageIsLoaded();
+        return this;
+    }
+
+    public YoutubePage closePopup() {
+        clickElement(buttonRejectAll);
         return this;
     }
 

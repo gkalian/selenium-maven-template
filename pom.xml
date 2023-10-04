@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.playground</groupId>
-    <artifactId>Playground</artifactId>
+    <groupId>org.gkalian</groupId>
+    <artifactId>selenium-maven-template</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <name>Selenium Tests Playground</name>
@@ -35,16 +35,17 @@
         <testscope>testng.xml</testscope>
 
         <!--List of versions-->
-        <version-webdrivermanager>5.1.1</version-webdrivermanager>
-        <version-selenium>4.1.3</version-selenium>
-        <version-testng>7.5</version-testng>
-        <version-log4j>2.17.2</version-log4j>
-        <version-allure-testng>2.13.9</version-allure-testng>
+        <version-webdrivermanager>5.3.1</version-webdrivermanager>
+        <version-selenium>4.7.1</version-selenium>
+        <version-testng>7.7.0</version-testng>
+        <version-log4j>2.19.0</version-log4j>
+        <version-allure-testng>2.20.0</version-allure-testng>
         <version-allure-maven>2.10.0</version-allure-maven>
         <version-maven-surefire>3.0.0-M3</version-maven-surefire>
         <version-aspectj>1.9.4</version-aspectj>
         <version-lombok>1.18.24</version-lombok>
         <version-slf4j>1.7.25</version-slf4j>
+        <version-commons-lang3>3.13.0</version-commons-lang3>
     </properties>
 
     <dependencies>
@@ -83,6 +84,12 @@
             <artifactId>lombok</artifactId>
             <version>${version-lombok}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${version-commons-lang3}</version>
+        </dependency>
+
     </dependencies>
 
     <build>

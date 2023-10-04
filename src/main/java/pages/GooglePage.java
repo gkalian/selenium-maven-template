@@ -29,10 +29,18 @@ public class GooglePage extends AbstractPage<GooglePage> {
     @FindBy(xpath = "//a[contains(.,'github.com')]")
     WebElement firstlink;
 
+    @FindBy(id="W0wltc")
+    WebElement closeCookiesPopup;
+
     /**Page Methods*/
     public GooglePage openGoogleURL(String url) {
         openUrl(url);
         waitUntilPageIsLoaded();
+        return this;
+    }
+
+    public GooglePage closePopup() {
+        clickElement(closeCookiesPopup);
         return this;
     }
 

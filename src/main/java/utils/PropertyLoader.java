@@ -1,6 +1,6 @@
 package utils;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;

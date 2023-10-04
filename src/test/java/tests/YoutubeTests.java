@@ -24,6 +24,7 @@ public class YoutubeTests extends TestRunner {
 
             yt
                     .openYT(url)
+                    .closePopup()
                     .titleYTAssert(title)
                     .searchFor(search)
                     .checkYTUrl(searchUrl);
