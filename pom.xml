@@ -39,7 +39,7 @@
         <version-selenium>4.7.1</version-selenium>
         <version-testng>7.7.0</version-testng>
         <version-log4j>2.19.0</version-log4j>
-        <version-allure-testng>2.20.0</version-allure-testng>
+        <version-allure-testng>2.29.1</version-allure-testng>
         <version-allure-maven>2.10.0</version-allure-maven>
         <version-maven-surefire>3.0.0-M3</version-maven-surefire>
         <version-aspectj>1.9.4</version-aspectj>
