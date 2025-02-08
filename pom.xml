@@ -43,7 +43,7 @@
         <version-allure-maven>2.15.2</version-allure-maven>
         <version-maven-surefire>3.5.2</version-maven-surefire>
         <version-aspectj>1.9.4</version-aspectj>
-        <version-lombok>1.18.24</version-lombok>
+        <version-lombok>1.18.36</version-lombok>
         <version-slf4j>1.7.25</version-slf4j>
         <version-commons-lang3>3.17.0</version-commons-lang3>
     </properties>
