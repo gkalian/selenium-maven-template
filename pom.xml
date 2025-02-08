@@ -37,7 +37,7 @@
         <!--List of versions-->
         <version-webdrivermanager>5.3.1</version-webdrivermanager>
         <version-selenium>4.28.1</version-selenium>
-        <version-testng>7.7.0</version-testng>
+        <version-testng>7.10.2</version-testng>
         <version-log4j>2.24.3</version-log4j>
         <version-allure-testng>2.29.1</version-allure-testng>
         <version-allure-maven>2.15.2</version-allure-maven>
