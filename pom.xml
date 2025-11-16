@@ -45,7 +45,7 @@
         <version-aspectj>1.9.22.1</version-aspectj>
         <version-lombok>1.18.36</version-lombok>
         <version-slf4j>1.7.25</version-slf4j>
-        <version-commons-lang3>3.17.0</version-commons-lang3>
+        <version-commons-lang3>3.20.0</version-commons-lang3>
     </properties>
 
     <dependencies>
