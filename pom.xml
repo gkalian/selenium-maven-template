@@ -40,7 +40,7 @@
         <version-testng>7.10.2</version-testng>
         <version-log4j>2.24.3</version-log4j>
         <version-allure-testng>2.29.1</version-allure-testng>
-        <version-allure-maven>2.15.2</version-allure-maven>
+        <version-allure-maven>2.17.0</version-allure-maven>
         <version-maven-surefire>3.5.2</version-maven-surefire>
         <version-aspectj>1.9.22.1</version-aspectj>
         <version-lombok>1.18.36</version-lombok>
